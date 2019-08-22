@@ -1,5 +1,7 @@
+// eslint-disable
 import React from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import { Header, Form, Button } from "semantic-ui-react";
 
 export default function Login() {
@@ -51,25 +53,11 @@ export default function Login() {
             onChange={e => setPassword(e.target.value)}
           />
         </Form.Field>
-        <Button type="submit">Login</Button>
+
+        <Button type="submit">
+          <Link to="/">Login</Link>
+        </Button>
       </Form>
-      {/* <form onSubmit={handleSubmit}>
-        <input
-          placeholder="username"
-          type="text"
-          name="username"
-          value={username}
-          onChange={e => setUsername(e.target.value)}
-        />
-        <input
-          placeholder="password"
-          type="text"
-          name="password"
-          value={password}
-          onChange={e => setPassword(e.target.value)}
-        />
-        <input type="submit" value="Log in" />
-      </form> */}
     </React.Fragment>
   );
 }

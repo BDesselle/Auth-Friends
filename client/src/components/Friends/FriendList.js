@@ -1,8 +1,10 @@
+// eslint-disable
 import React from "react";
 import { axiosWithAuth } from "../../helpers/AxiosWithAuth";
 import { Card, Header } from "semantic-ui-react";
 // Components
 import Friend from "./Friend";
+import AddFriend from "./AddFriend";
 
 export default function FriendList() {
   const [state, setState] = React.useState({
@@ -34,6 +36,7 @@ export default function FriendList() {
       <Header dividing as="h1" textAlign="center">
         Friends List
       </Header>
+      <AddFriend />
       <Card.Group centered itemsPerRow={3}>
         {state.friends.map(friend => {
           return <Friend key={friend.id} friend={friend} />;
