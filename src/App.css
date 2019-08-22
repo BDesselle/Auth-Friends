@@ -1,0 +1,18 @@
+.App {
+  text-align: center;
+}
+
+.ui.raised.segment {
+  width: 800px;
+  margin: 100px auto;
+}
+
+.ui.form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.description {
+  width: 275px;
+  margin: 5px auto;
+}
